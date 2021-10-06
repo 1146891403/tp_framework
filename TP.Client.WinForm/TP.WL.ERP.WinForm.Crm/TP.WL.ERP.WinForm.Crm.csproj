@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15CC14B9-AB45-4D6B-ACFD-A8D5255D9989}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP.WL.ERP.WinForm.Crm</RootNamespace>
+    <AssemblyName>TP.WL.ERP.WinForm.Crm</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\TP.WL.ERP.WinForm\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\CertificateGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\CertificateGridView.Designer.cs">
+      <DependentUpon>CertificateGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\ClientGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\ClientGridView.Designer.cs">
+      <DependentUpon>ClientGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\CrmModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Forms\FrmClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmClient.Designer.cs">
+      <DependentUpon>FrmClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientBrand.Designer.cs">
+      <DependentUpon>FrmClientBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmCertificate.Designer.cs">
+      <DependentUpon>FrmCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientCertificateGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientCertificateGroup.Designer.cs">
+      <DependentUpon>FrmClientCertificateGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientContact.Designer.cs">
+      <DependentUpon>FrmClientContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientExpress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientExpress.Designer.cs">
+      <DependentUpon>FrmClientExpress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientSignFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmClientSignFile.Designer.cs">
+      <DependentUpon>FrmClientSignFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TP.Domain\TP.WL.ERP.Model\TP.WL.ERP.Model.csproj">
+      <Project>{18AFBB0D-738E-4063-94BC-77636F02BDDC}</Project>
+      <Name>TP.WL.ERP.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TP.Infrastructure\TP.Infrastructure.Common\TP.Infrastructure.Common.csproj">
+      <Project>{09B5C2DA-9232-43BB-992A-029E70C0D728}</Project>
+      <Name>TP.Infrastructure.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TP.Client.Common.WinForm\TP.Client.WinForm.Common.csproj">
+      <Project>{31248E19-FED8-4AF0-98E3-A7C196C03599}</Project>
+      <Name>TP.Client.WinForm.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\CertificateGridView.resx">
+      <DependentUpon>CertificateGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\ClientGridView.resx">
+      <DependentUpon>ClientGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmClient.resx">
+      <DependentUpon>FrmClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmClientBrand.resx">
+      <DependentUpon>FrmClientBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmClientContact.resx">
+      <DependentUpon>FrmClientContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\bocustomer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\bocustomer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\engineering_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\engineering_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

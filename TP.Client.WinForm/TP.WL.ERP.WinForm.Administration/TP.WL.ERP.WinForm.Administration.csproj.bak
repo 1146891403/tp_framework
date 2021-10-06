@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC3E7B79-6326-4FAE-A777-F87AE4CC1B6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP.WL.ERP.WinForm.Administration</RootNamespace>
+    <AssemblyName>TP.WL.ERP.WinForm.Administration</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\TP.WL.ERP.WinForm\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\AdministrationModule.cs" />
+    <Compile Include="src\Controls\FunctionGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\FunctionGridView.Designer.cs">
+      <DependentUpon>FunctionGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\NavigationGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\NavigationGridView.Designer.cs">
+      <DependentUpon>NavigationGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\OrganizationGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\OrganizationGridView.Designer.cs">
+      <DependentUpon>OrganizationGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\PermissionGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\PermissionGridView.Designer.cs">
+      <DependentUpon>PermissionGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\DictionaryGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\DictionaryGridView.Designer.cs">
+      <DependentUpon>DictionaryGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Controls\UserGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\UserGridView.Designer.cs">
+      <DependentUpon>UserGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmDictionaryBatchData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmDictionaryBatchData.Designer.cs">
+      <DependentUpon>FrmDictionaryBatchData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmDictionaryData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmDictionaryData.Designer.cs">
+      <DependentUpon>FrmDictionaryData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmDictionaryType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmDictionaryType.Designer.cs">
+      <DependentUpon>FrmDictionaryType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmFunction.Designer.cs">
+      <DependentUpon>FrmFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmFunctionBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmFunctionBatch.Designer.cs">
+      <DependentUpon>FrmFunctionBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmNavigation.Designer.cs">
+      <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmOrganization.Designer.cs">
+      <DependentUpon>FrmOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmRole.Designer.cs">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmUserInRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmUserInRole.Designer.cs">
+      <DependentUpon>FrmUserInRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmUserProfile.Designer.cs">
+      <DependentUpon>FrmUserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Reports\UserReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Reports\UserReport.Designer.cs">
+      <DependentUpon>UserReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TP.Domain\TP.WL.ERP.Model\TP.WL.ERP.Model.csproj">
+      <Project>{18AFBB0D-738E-4063-94BC-77636F02BDDC}</Project>
+      <Name>TP.WL.ERP.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TP.Infrastructure\TP.Infrastructure.Common\TP.Infrastructure.Common.csproj">
+      <Project>{09B5C2DA-9232-43BB-992A-029E70C0D728}</Project>
+      <Name>TP.Infrastructure.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TP.Client.Common.WinForm\TP.Client.WinForm.Common.csproj">
+      <Project>{31248E19-FED8-4AF0-98E3-A7C196C03599}</Project>
+      <Name>TP.Client.WinForm.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\NavigationGridView.resx">
+      <DependentUpon>NavigationGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\OrganizationGridView.resx">
+      <DependentUpon>OrganizationGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\PermissionGridView.resx">
+      <DependentUpon>PermissionGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\DictionaryGridView.resx">
+      <DependentUpon>DictionaryGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\UserGridView.resx">
+      <DependentUpon>UserGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmDictionaryBatchData.resx">
+      <DependentUpon>FrmDictionaryBatchData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmDictionaryData.resx">
+      <DependentUpon>FrmDictionaryData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmDictionaryType.resx">
+      <DependentUpon>FrmDictionaryType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmFunction.resx">
+      <DependentUpon>FrmFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmFunctionBatch.resx">
+      <DependentUpon>FrmFunctionBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmNavigation.resx">
+      <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmOrganization.resx">
+      <DependentUpon>FrmOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmRole.resx">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmUserInRole.resx">
+      <DependentUpon>FrmUserInRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmUserProfile.resx">
+      <DependentUpon>FrmUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Reports\UserReport.resx">
+      <DependentUpon>UserReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\user_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\user_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\role_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\role_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\usergroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\usergroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\navigationbar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\navigationbar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\text_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\text_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\functionsmore_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\functionsmore_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\delete_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

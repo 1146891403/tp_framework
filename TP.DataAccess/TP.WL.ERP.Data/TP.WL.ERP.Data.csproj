@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D910D212-2F3D-4445-9910-88CDDA0617B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP.WL.ERP.Data</RootNamespace>
+    <AssemblyName>TP.WL.ERP.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\202110060146478_update.cs" />
+    <Compile Include="Migrations\202110060146478_update.Designer.cs">
+      <DependentUpon>202110060146478_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\ApplicationDbContext.cs" />
+    <Compile Include="src\AppRepositoryBase.cs" />
+    <Compile Include="src\Entities\Crm\Certificate.cs" />
+    <Compile Include="src\Entities\Crm\Client.cs" />
+    <Compile Include="src\Entities\Crm\ClientBrand.cs" />
+    <Compile Include="src\Entities\Crm\ClientCertificate.cs" />
+    <Compile Include="src\Entities\Crm\ClientCertificateGroup.cs" />
+    <Compile Include="src\Entities\Crm\ClientContact.cs" />
+    <Compile Include="src\Entities\Crm\ClientExpress.cs" />
+    <Compile Include="src\Entities\Crm\ClientExpressCategory.cs" />
+    <Compile Include="src\Entities\Crm\ClientOpenFile.cs" />
+    <Compile Include="src\Entities\Crm\ClientProfile.cs" />
+    <Compile Include="src\Entities\Crm\ClientSignFile.cs" />
+    <Compile Include="src\Entities\Crm\ClientWorkflowLog.cs" />
+    <Compile Include="src\Entities\Crm\SalesTarget.cs" />
+    <Compile Include="src\Entities\Estimate\EstimateComponent.cs" />
+    <Compile Include="src\Entities\Estimate\EstimateComponentItem.cs" />
+    <Compile Include="src\Entities\Estimate\EstimateCost.cs" />
+    <Compile Include="src\Entities\Estimate\EstimateMaterial.cs" />
+    <Compile Include="src\Entities\Estimate\EstimateRequest.cs" />
+    <Compile Include="src\Extensions\ModelBuilderExtensions.cs" />
+    <Compile Include="src\Mappings\Crm\CertificateMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientCertificateMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientOpenFileMap.cs" />
+    <Compile Include="src\Mappings\Utilities\FileCabinetMap.cs" />
+    <Compile Include="src\Mappings\Utilities\FileShareRoleMap.cs" />
+    <Compile Include="src\Mappings\Utilities\FileShareUserMap.cs" />
+    <Compile Include="src\NumberWorker.cs" />
+    <Compile Include="src\Mappings\Administration\ApplicationRoleFunctionMap.cs" />
+    <Compile Include="src\Mappings\Administration\ApplicationRoleGroupMap.cs" />
+    <Compile Include="src\Mappings\Administration\ApplicationRoleViewMap.cs" />
+    <Compile Include="src\Mappings\Administration\ApplicationUserGroupMap.cs" />
+    <Compile Include="src\Mappings\Administration\DepartmentMap.cs" />
+    <Compile Include="src\Mappings\Administration\GroupMap.cs" />
+    <Compile Include="src\Mappings\Administration\LoginActivityMap.cs" />
+    <Compile Include="src\Mappings\Administration\SubsidiaryMap.cs" />
+    <Compile Include="src\Mappings\Administration\SystemChangesetItemMap.cs" />
+    <Compile Include="src\Mappings\Administration\SystemChangesetMap.cs" />
+    <Compile Include="src\Mappings\Administration\UserProfileMap.cs" />
+    <Compile Include="src\Mappings\Administration\ViewLinkDirectoryMap.cs" />
+    <Compile Include="src\Mappings\Administration\ViewLinkFunctionMap.cs" />
+    <Compile Include="src\Mappings\Administration\ViewLinkMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientBrandMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientCertificateGroupMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientContactMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientExpressMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientProfileMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientSignFileMap.cs" />
+    <Compile Include="src\Mappings\Crm\ClientWorkflowLogMap.cs" />
+    <Compile Include="src\Mappings\Crm\SalesTargetMap.cs" />
+    <Compile Include="src\Mappings\Estimate\EstimateComponentItemMap.cs" />
+    <Compile Include="src\Mappings\Estimate\EstimateComponentMap.cs" />
+    <Compile Include="src\Mappings\Estimate\EstimateCostMap.cs" />
+    <Compile Include="src\Mappings\Estimate\EstimateMaterialMap.cs" />
+    <Compile Include="src\Mappings\Estimate\EstimateRequestMap.cs" />
+    <Compile Include="src\Mappings\Utilities\CityMap.cs" />
+    <Compile Include="src\Mappings\Utilities\ClientTokenMap.cs" />
+    <Compile Include="src\Mappings\Utilities\CountryMap.cs" />
+    <Compile Include="src\Mappings\Utilities\DateFormattedNumberInstanceMap.cs" />
+    <Compile Include="src\Mappings\Utilities\DateFormattedNumberTemplateMap.cs" />
+    <Compile Include="src\Mappings\Utilities\DictionaryDataMap.cs" />
+    <Compile Include="src\Mappings\Utilities\DictionaryTypeMap.cs" />
+    <Compile Include="src\Mappings\Utilities\MailTemplateMap.cs" />
+    <Compile Include="src\Mappings\Utilities\NumberTemplateMap.cs" />
+    <Compile Include="src\Mappings\Utilities\ProvinceMap.cs" />
+    <Compile Include="src\Mappings\Utilities\RefreshTokenMap.cs" />
+    <Compile Include="src\Mappings\Workflow\BasicWorkflowStateMap.cs" />
+    <Compile Include="src\Mappings\Workflow\SequentialLevelMap.cs" />
+    <Compile Include="src\Mappings\Workflow\SequentialWorkflowStateMap.cs" />
+    <Compile Include="src\Mappings\Workflow\SequentialWorkflowStateSettingMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowInstanceMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowStateMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowStateOptionMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TP.Infrastructure\TP.Data.EntityFramework\TP.Data.EntityFramework.csproj">
+      <Project>{41655BD2-A337-4C99-968D-BC7CA7CF97BB}</Project>
+      <Name>TP.Data.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TP.Infrastructure\TP.Data.Repository.EntityFramework\TP.Data.Repository.EntityFramework.csproj">
+      <Project>{A2B286D2-6017-4A85-B2A4-2C1C7C32C620}</Project>
+      <Name>TP.Data.Repository.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TP.Infrastructure\TP.Infrastructure.Common\TP.Infrastructure.Common.csproj">
+      <Project>{09B5C2DA-9232-43BB-992A-029E70C0D728}</Project>
+      <Name>TP.Infrastructure.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202110060146478_update.resx">
+      <DependentUpon>202110060146478_update.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

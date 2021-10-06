@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7310AC4D-A057-4549-A852-CED2A51EC2C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP.WL.ERP.Repository.Crm</RootNamespace>
+    <AssemblyName>TP.WL.ERP.Repository.Crm</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Interfaces\ICertificateRepository.cs" />
+    <Compile Include="src\Interfaces\IClientRepository.cs" />
+    <Compile Include="src\Interfaces\IClientWorkflowRepository.cs" />
+    <Compile Include="src\Services\CertificateRepository.cs" />
+    <Compile Include="src\Services\ClientRepository.cs" />
+    <Compile Include="src\Services\ClientWorkflowRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\TP.Infrastructure\TP.Data.EntityFramework\TP.Data.EntityFramework.csproj">
+      <Project>{41655BD2-A337-4C99-968D-BC7CA7CF97BB}</Project>
+      <Name>TP.Data.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TP.Infrastructure\TP.Infrastructure.Common\TP.Infrastructure.Common.csproj">
+      <Project>{09B5C2DA-9232-43BB-992A-029E70C0D728}</Project>
+      <Name>TP.Infrastructure.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TP.Repository.Utility\TP.Repository.Utility.csproj">
+      <Project>{640D238F-6A83-4BD9-9F06-7E18DF74EDF2}</Project>
+      <Name>TP.Repository.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TP.WL.ERP.Data\TP.WL.ERP.Data.csproj">
+      <Project>{D910D212-2F3D-4445-9910-88CDDA0617B5}</Project>
+      <Name>TP.WL.ERP.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
