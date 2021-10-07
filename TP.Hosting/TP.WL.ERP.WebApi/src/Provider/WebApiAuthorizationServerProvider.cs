@@ -92,6 +92,8 @@ namespace TP.WL.ERP.WebApi.Provider
             var oAuthIdentity = new ClaimsIdentity(context.Options.AuthenticationType);
             oAuthIdentity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
             //oAuthIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, signInManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId()));
+            //设置登录用户的id
+            oAuthIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, "5"));
 
             AuthenticationProperties properties = CreateProperties(context.UserName);
             var ticket = new AuthenticationTicket(oAuthIdentity, new AuthenticationProperties());

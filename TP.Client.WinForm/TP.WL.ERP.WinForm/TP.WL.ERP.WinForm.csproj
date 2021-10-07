@@ -139,6 +139,14 @@
       <Project>{31248E19-FED8-4AF0-98E3-A7C196C03599}</Project>
       <Name>TP.Client.WinForm.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TP.WL.ERP.WinForm.Administration\TP.WL.ERP.WinForm.Administration.csproj">
+      <Project>{dc3e7b79-6326-4fae-a777-f87ae4cc1b6c}</Project>
+      <Name>TP.WL.ERP.WinForm.Administration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TP.WL.ERP.WinForm.Crm\TP.WL.ERP.WinForm.Crm.csproj">
+      <Project>{15cc14b9-ab45-4d6b-acfd-a8d5255d9989}</Project>
+      <Name>TP.WL.ERP.WinForm.Crm</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Http;
 using TP.Business.Administration.Interfaces;
@@ -70,15 +71,21 @@ namespace TP.WL.ERP.WebApi.Controllers.Administration
         [Route("get_views"), HttpGet]
         public async Task<WebApiResult<NavigationListModel>> GetViewsAsync()
         {
-            //return await _userService.GetViewsAsync(User.Identity.GetUserId());
-            return await _userService.GetViewsAsync("5");
+            return await _userService.GetViewsAsync(User.Identity.GetUserId());
+            //return await _userService.GetViewsAsync("5");
         }
 
         [Route("get_functions"), HttpGet]
         public async Task<WebApiResult<string>> GetFunctionsAsync()
         {
-            //return await _userService.GetFunctionsAsync(User.Identity.GetUserId());
-            return await _userService.GetFunctionsAsync("5");
+            //var user = (ClaimsIdentity)User.Identity;
+
+            //System.Diagnostics.Debug.WriteLine(User.Identity.GetUserId());
+            //System.Diagnostics.Debug.WriteLine(User.Identity.GetUserName());
+            //System.Diagnostics.Debug.WriteLine(user.FindFirstValue("test"));
+            
+            return await _userService.GetFunctionsAsync(User.Identity.GetUserId());
+            //return await _userService.GetFunctionsAsync("5");
         }
 
         [Route("add"), HttpPost]
