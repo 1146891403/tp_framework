@@ -28,5 +28,7 @@ namespace TP.Business.Administration.Interfaces
         Task<WebApiResult<string>> AddAsync(UserEditModel model);
 
         Task<WebApiResult<string>> UpdateAsync(UserEditModel model);
+
+        Task<WebApiResult<string>> UpdatePasswordAsync(string userId, string currentPassword, string newPassword);
     }
 }

@@ -18,6 +18,9 @@ namespace TP.WL.ERP.WinForm.Administration
             ModulesInfo.Add("DictionaryGridView", typeof(Controls.DictionaryGridView), "", "text");
             ModulesInfo.Add("OrganizationGridView", typeof(Controls.OrganizationGridView), "", "usergroup");
             ModulesInfo.Add("FunctionGridView", typeof(Controls.FunctionGridView), "", "functionsmore");
+            
+            ModulesInfo.Add("TreeListDemo", typeof(Controls.TreeListDemo), "", "functionsmore");
+            ModulesInfo.Add("FrmChangePassword", typeof(Forms.FrmChangePassword), "", "usergroup");
         }
     }
 }

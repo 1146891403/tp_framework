@@ -3,6 +3,8 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraSplashScreen;
 using System;
 using TP.Client.WinForm.Common;
+using TP.WL.ERP.Model.Administration;
+using TP.WL.ERP.WinForm.Administration.Forms;
 using static TP.WL.ERP.WinForm.ssMain;
 
 namespace TP.WL.ERP.WinForm
@@ -40,8 +42,16 @@ namespace TP.WL.ERP.WinForm
         public void ShowModule(string key, string name, DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tableView)
         {
             var item = ModulesInfo.GetItem(key);
-            if (item != null)
-                ModulesInfo.ShowModule(item, name, this, tableView);
+
+            if (key == "FrmChangePassword")
+            {
+                new FrmChangePassword(new UserEditModel()).Show();
+            }
+            else
+            {
+                if (item != null)
+                    ModulesInfo.ShowModule(item, name, this, tableView);
+            }
         }
     }
 }

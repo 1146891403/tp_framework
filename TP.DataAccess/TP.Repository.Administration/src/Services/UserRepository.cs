@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -91,6 +92,11 @@ namespace TP.Repository.Administration.Services
         public async Task<IdentityResult> UpdateAsync(ApplicationUser user)
         {
             return await UserManager.UpdateAsync(user);
+        }
+
+        public async Task<IdentityResult> UpdatePasswordAsync(string userId,string currentPassword, string newPassword)
+        {
+            return await UserManager.ChangePasswordAsync(userId, currentPassword, newPassword);
         }
     }
 }

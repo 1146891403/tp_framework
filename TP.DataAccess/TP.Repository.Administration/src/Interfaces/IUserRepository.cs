@@ -34,5 +34,7 @@ namespace TP.Repository.Administration.Interfaces
         Task<IdentityResult> InsertAsync(ApplicationUser user, string password);
 
         Task<IdentityResult> UpdateAsync(ApplicationUser user);
+
+        Task<IdentityResult> UpdatePasswordAsync(string userId, string currentPassword, string newPassword);
     }
 }

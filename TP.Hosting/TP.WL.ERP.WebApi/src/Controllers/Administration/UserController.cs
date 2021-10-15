@@ -99,5 +99,12 @@ namespace TP.WL.ERP.WebApi.Controllers.Administration
         {
             return await _userService.UpdateAsync(model);
         }
+
+        [Route("update_password"),HttpPut]
+        public async Task<WebApiResult<string>> UpdatePasswordAsync([FromBody]UserEditModel model)
+        {
+            var userid = User.Identity.GetUserId();
+            return await _userService.UpdatePasswordAsync(userid, model.OldPassword, model.NewPassword);
+        }
     }
 }

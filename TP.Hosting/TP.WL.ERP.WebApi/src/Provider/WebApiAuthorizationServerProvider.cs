@@ -82,18 +82,17 @@ namespace TP.WL.ERP.WebApi.Provider
             System.Diagnostics.Debug.WriteLine(context.Password);
 
             var signInManager = context.OwinContext.Get<ApplicationSignInManager>();
-            //var result = await signInManager.PasswordSignInAsync(context.UserName, context.Password, false, false);
-            //if (result != SignInStatus.Success)
-            //{
-            //    context.SetError("invalid_grant", "用户名或密码错误。");
-            //    return;
-            //}
+            var result = await signInManager.PasswordSignInAsync(context.UserName, context.Password, false, false);
+            if (result != SignInStatus.Success)
+            {
+                context.SetError("invalid_grant", "用户名或密码错误。");
+                return;
+            }
 
             var oAuthIdentity = new ClaimsIdentity(context.Options.AuthenticationType);
             oAuthIdentity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
-            //oAuthIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, signInManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId()));
-            //设置登录用户的id
-            oAuthIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, "5"));
+            oAuthIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, signInManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId()));
+            //oAuthIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, "5"));
 
             AuthenticationProperties properties = CreateProperties(context.UserName);
             var ticket = new AuthenticationTicket(oAuthIdentity, new AuthenticationProperties());
@@ -123,10 +122,8 @@ namespace TP.WL.ERP.WebApi.Provider
         public override Task MatchEndpoint(OAuthMatchEndpointContext context)
         {
             var values = context.Request.Headers.Get("authorization");
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(context.Request.Headers);
 
             System.Diagnostics.Debug.WriteLine(values);
-            System.Diagnostics.Debug.WriteLine(json);
 
 
             if (context.OwinContext.Request.Method == "OPTIONS" && context.IsTokenEndpoint)

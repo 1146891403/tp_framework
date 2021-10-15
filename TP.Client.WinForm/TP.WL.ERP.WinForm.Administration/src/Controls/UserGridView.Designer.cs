@@ -51,6 +51,8 @@
             this.gcJoinDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnTest = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgMain)).BeginInit();
@@ -77,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riicbGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -86,8 +89,10 @@
             this.lcMain.Controls.Add(this.treeListLookUpEdit1);
             this.lcMain.Controls.Add(this.textEdit2);
             this.lcMain.Controls.Add(this.textEdit1);
+            this.lcMain.Controls.Add(this.btnTest);
             this.lcMain.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(48, 126, 650, 400);
             this.lcMain.Size = new System.Drawing.Size(1024, 768);
+            this.lcMain.Controls.SetChildIndex(this.btnTest, 0);
             this.lcMain.Controls.SetChildIndex(this.btnSearch, 0);
             this.lcMain.Controls.SetChildIndex(this.btnNew, 0);
             this.lcMain.Controls.SetChildIndex(this.pagination, 0);
@@ -114,7 +119,7 @@
             // 
             // esiRight
             // 
-            this.esiRight.Location = new System.Drawing.Point(770, 0);
+            this.esiRight.Location = new System.Drawing.Point(859, 0);
             // 
             // esiLeft
             // 
@@ -127,18 +132,19 @@
             this.lciNumber,
             this.lciName,
             this.lciOrganization,
-            this.lciStatus});
-            this.lcgSearch.Size = new System.Drawing.Size(814, 93);
+            this.lciStatus,
+            this.layoutControlItem1});
+            this.lcgSearch.Size = new System.Drawing.Size(903, 93);
             // 
             // lciPagination
             // 
             this.lciPagination.Location = new System.Drawing.Point(0, 706);
-            this.lciPagination.Size = new System.Drawing.Size(814, 42);
+            this.lciPagination.Size = new System.Drawing.Size(903, 42);
             // 
             // pagination
             // 
             this.pagination.Location = new System.Drawing.Point(12, 718);
-            this.pagination.Size = new System.Drawing.Size(810, 38);
+            this.pagination.Size = new System.Drawing.Size(899, 38);
             // 
             // btnNew
             // 
@@ -152,22 +158,22 @@
             // 
             // pnlView
             // 
-            this.pnlView.Location = new System.Drawing.Point(841, 38);
-            this.pnlView.Size = new System.Drawing.Size(166, 713);
+            this.pnlView.Location = new System.Drawing.Point(930, 38);
+            this.pnlView.Size = new System.Drawing.Size(77, 713);
             // 
             // splitter
             // 
-            this.splitter.Location = new System.Drawing.Point(814, 0);
+            this.splitter.Location = new System.Drawing.Point(903, 0);
             this.splitter.Size = new System.Drawing.Size(10, 748);
             // 
             // lcgReportView
             // 
-            this.lcgReportView.Location = new System.Drawing.Point(824, 0);
-            this.lcgReportView.Size = new System.Drawing.Size(180, 748);
+            this.lcgReportView.Location = new System.Drawing.Point(913, 0);
+            this.lcgReportView.Size = new System.Drawing.Size(91, 748);
             // 
             // lciReportView
             // 
-            this.lciReportView.Size = new System.Drawing.Size(170, 717);
+            this.lciReportView.Size = new System.Drawing.Size(81, 717);
             // 
             // textEdit1
             // 
@@ -270,7 +276,7 @@
             this.gridUser.Name = "gridUser";
             this.gridUser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.riicbGender});
-            this.gridUser.Size = new System.Drawing.Size(810, 609);
+            this.gridUser.Size = new System.Drawing.Size(899, 609);
             this.gridUser.TabIndex = 12;
             this.gridUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvUser});
@@ -289,6 +295,7 @@
             this.gcStatus});
             this.gvUser.GridControl = this.gridUser;
             this.gvUser.Name = "gvUser";
+            this.gvUser.OptionsBehavior.Editable = false;
             this.gvUser.OptionsView.ShowGroupPanel = false;
             // 
             // gcGender
@@ -302,8 +309,6 @@
             this.gcGender.OptionsColumn.AllowSize = false;
             this.gcGender.OptionsColumn.FixedWidth = true;
             this.gcGender.OptionsColumn.ShowCaption = false;
-            this.gcGender.Visible = true;
-            this.gcGender.VisibleIndex = 0;
             this.gcGender.Width = 30;
             // 
             // riicbGender
@@ -391,9 +396,30 @@
             this.layoutControlItem5.Control = this.gridUser;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 93);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(814, 613);
+            this.layoutControlItem5.Size = new System.Drawing.Size(903, 613);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(794, 45);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(85, 44);
+            this.btnTest.StyleController = this.lcMain;
+            this.btnTest.TabIndex = 13;
+            this.btnTest.Text = "测试";
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.btnTest;
+            this.layoutControlItem1.Location = new System.Drawing.Point(770, 0);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(89, 26);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(89, 48);
+            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // UserGridView
             // 
@@ -427,6 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riicbGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,5 +481,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcDesignation;
         private DevExpress.XtraGrid.Columns.GridColumn gcJoinDate;
         private DevExpress.XtraGrid.Columns.GridColumn gcStatus;
+        private DevExpress.XtraEditors.SimpleButton btnTest;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

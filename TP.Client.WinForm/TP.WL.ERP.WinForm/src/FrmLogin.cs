@@ -35,6 +35,9 @@ namespace TP.WL.ERP.WinForm
                 lcError.Text = string.Empty;
 
             teUserName.Text = username;
+
+            teUserName.Text = "userzz";
+            tePassword.Text = "qweqwe";
         }
 
         public string UserName { get; set; }

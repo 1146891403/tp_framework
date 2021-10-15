@@ -2,6 +2,8 @@
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP.Client.WinForm.Common.Controls;
@@ -94,5 +96,18 @@ namespace TP.WL.ERP.WinForm.Administration.Controls
         private void ReportView_NextClick(object sender, EventArgs e) => MainView.FocusedRowHandle++;
 
         private void ReportView_EditClick(object sender, EventArgs e) => Edit();
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            //var list = Grid.DataSource.As<List<UserListModel>>();
+            var list = BindingGridModels.As<List<UserListModel>>();
+            var user = list.Find(x => x.UserId == "25666750");
+            user.Email = "email@toppanleefung.com";
+
+            bs.DataSource = list;
+
+            Grid.DataSource = bs;
+        }
     }
 }

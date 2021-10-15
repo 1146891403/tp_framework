@@ -44,6 +44,12 @@
             this.lcTreeName = new DevExpress.XtraEditors.LabelControl();
             this.lciTreeName = new DevExpress.XtraLayout.LayoutControlItem();
             this.tcgRole = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.lcgUser = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciTabUserRefresh = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnTabRefreshUser = new DevExpress.XtraEditors.SimpleButton();
+            this.esiTabUser = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciTabUserNew = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnTabNewUser = new DevExpress.XtraEditors.SimpleButton();
             this.lcgNavigation = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciTreeNavigation = new DevExpress.XtraLayout.LayoutControlItem();
             this.treeNavigation = new DevExpress.XtraTreeList.TreeList();
@@ -52,12 +58,6 @@
             this.esiTabNavigation = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciTabNavSave = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnTabSaveNav = new DevExpress.XtraEditors.SimpleButton();
-            this.lcgUser = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciTabUserRefresh = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnTabRefreshUser = new DevExpress.XtraEditors.SimpleButton();
-            this.esiTabUser = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciTabUserNew = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnTabNewUser = new DevExpress.XtraEditors.SimpleButton();
             this.lcgFunction = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciTreeFunction = new DevExpress.XtraLayout.LayoutControlItem();
             this.treeFunction = new DevExpress.XtraTreeList.TreeList();
@@ -92,16 +92,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tcgRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.esiTabNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavSave)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeFunction)).BeginInit();
@@ -167,50 +167,50 @@
             this.lcgSearch.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lciTreeTitle,
             this.lciTreeName});
-            this.lcgSearch.Location = new System.Drawing.Point(233, 0);
-            this.lcgSearch.Size = new System.Drawing.Size(771, 91);
+            this.lcgSearch.Location = new System.Drawing.Point(238, 0);
+            this.lcgSearch.Size = new System.Drawing.Size(766, 93);
             this.lcgSearch.Text = "角色信息";
             // 
             // esiLeft
             // 
             this.esiLeft.Location = new System.Drawing.Point(114, 0);
-            this.esiLeft.Size = new System.Drawing.Size(453, 48);
+            this.esiLeft.Size = new System.Drawing.Size(448, 48);
             // 
             // pagination
             // 
-            this.pagination.Location = new System.Drawing.Point(245, 718);
-            this.pagination.Size = new System.Drawing.Size(767, 38);
+            this.pagination.Location = new System.Drawing.Point(250, 718);
+            this.pagination.Size = new System.Drawing.Size(762, 38);
             // 
             // lciPagination
             // 
-            this.lciPagination.Location = new System.Drawing.Point(233, 706);
-            this.lciPagination.Size = new System.Drawing.Size(771, 42);
+            this.lciPagination.Location = new System.Drawing.Point(238, 706);
+            this.lciPagination.Size = new System.Drawing.Size(766, 42);
             // 
             // lciTreeList
             // 
-            this.lciTreeList.Size = new System.Drawing.Size(218, 719);
+            this.lciTreeList.Size = new System.Drawing.Size(218, 717);
             // 
             // esiRight
             // 
-            this.esiRight.Location = new System.Drawing.Point(727, 0);
+            this.esiRight.Location = new System.Drawing.Point(722, 0);
             // 
             // lciBtnSearch
             // 
-            this.lciBtnSearch.Location = new System.Drawing.Point(567, 0);
+            this.lciBtnSearch.Location = new System.Drawing.Point(562, 0);
             // 
             // lciBtnNew
             // 
-            this.lciBtnNew.Location = new System.Drawing.Point(647, 0);
+            this.lciBtnNew.Location = new System.Drawing.Point(642, 0);
             // 
             // btnSearch
             // 
             this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(826, 45);
+            this.btnSearch.Location = new System.Drawing.Point(826, 47);
             // 
             // btnNew
             // 
             this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
-            this.btnNew.Location = new System.Drawing.Point(906, 45);
+            this.btnNew.Location = new System.Drawing.Point(906, 47);
             // 
             // colDisplayName
             // 
@@ -225,14 +225,14 @@
             this.splitter.AllowHotTrack = true;
             this.splitter.Location = new System.Drawing.Point(228, 0);
             this.splitter.Name = "splitter";
-            this.splitter.Size = new System.Drawing.Size(5, 748);
+            this.splitter.Size = new System.Drawing.Size(10, 748);
             // 
             // gridUser
             // 
-            this.gridUser.Location = new System.Drawing.Point(257, 164);
+            this.gridUser.Location = new System.Drawing.Point(262, 167);
             this.gridUser.MainView = this.gvUser;
             this.gridUser.Name = "gridUser";
-            this.gridUser.Size = new System.Drawing.Size(743, 538);
+            this.gridUser.Size = new System.Drawing.Size(738, 535);
             this.gridUser.TabIndex = 8;
             this.gridUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvUser});
@@ -294,13 +294,13 @@
             this.lciGrid.Control = this.gridUser;
             this.lciGrid.Location = new System.Drawing.Point(0, 26);
             this.lciGrid.Name = "lciGrid";
-            this.lciGrid.Size = new System.Drawing.Size(747, 542);
+            this.lciGrid.Size = new System.Drawing.Size(742, 539);
             this.lciGrid.TextSize = new System.Drawing.Size(0, 0);
             this.lciGrid.TextVisible = false;
             // 
             // lcTreeTitle
             // 
-            this.lcTreeTitle.Location = new System.Drawing.Point(267, 56);
+            this.lcTreeTitle.Location = new System.Drawing.Point(272, 58);
             this.lcTreeTitle.Name = "lcTreeTitle";
             this.lcTreeTitle.Size = new System.Drawing.Size(60, 14);
             this.lcTreeTitle.StyleController = this.lcMain;
@@ -319,7 +319,7 @@
             // 
             // lcTreeName
             // 
-            this.lcTreeName.Location = new System.Drawing.Point(331, 56);
+            this.lcTreeName.Location = new System.Drawing.Point(336, 58);
             this.lcTreeName.Name = "lcTreeName";
             this.lcTreeName.Size = new System.Drawing.Size(36, 14);
             this.lcTreeName.StyleController = this.lcMain;
@@ -338,96 +338,15 @@
             // 
             // tcgRole
             // 
-            this.tcgRole.Location = new System.Drawing.Point(233, 91);
+            this.tcgRole.Location = new System.Drawing.Point(238, 93);
             this.tcgRole.Name = "tcgRole";
-            this.tcgRole.SelectedTabPage = this.lcgUser;
-            this.tcgRole.SelectedTabPageIndex = 0;
-            this.tcgRole.Size = new System.Drawing.Size(771, 615);
+            this.tcgRole.SelectedTabPage = this.lcgNavigation;
+            this.tcgRole.Size = new System.Drawing.Size(766, 613);
             this.tcgRole.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lcgUser,
             this.lcgNavigation,
             this.lcgFunction,
             this.lcgOrganization});
-            // 
-            // lcgNavigation
-            // 
-            this.lcgNavigation.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciTreeNavigation,
-            this.lciTabNavRefresh,
-            this.esiTabNavigation,
-            this.lciTabNavSave});
-            this.lcgNavigation.Location = new System.Drawing.Point(0, 0);
-            this.lcgNavigation.Name = "lcgNavigation";
-            this.lcgNavigation.Size = new System.Drawing.Size(747, 568);
-            this.lcgNavigation.Text = "可訪問菜單";
-            // 
-            // lciTreeNavigation
-            // 
-            this.lciTreeNavigation.Control = this.treeNavigation;
-            this.lciTreeNavigation.Location = new System.Drawing.Point(0, 26);
-            this.lciTreeNavigation.Name = "lciTreeNavigation";
-            this.lciTreeNavigation.Size = new System.Drawing.Size(747, 542);
-            this.lciTreeNavigation.TextSize = new System.Drawing.Size(0, 0);
-            this.lciTreeNavigation.TextVisible = false;
-            // 
-            // treeNavigation
-            // 
-            this.treeNavigation.Location = new System.Drawing.Point(257, 164);
-            this.treeNavigation.Name = "treeNavigation";
-            this.treeNavigation.Size = new System.Drawing.Size(743, 538);
-            this.treeNavigation.TabIndex = 11;
-            // 
-            // lciTabNavRefresh
-            // 
-            this.lciTabNavRefresh.Control = this.btnTabRefreshNav;
-            this.lciTabNavRefresh.Location = new System.Drawing.Point(0, 0);
-            this.lciTabNavRefresh.MaxSize = new System.Drawing.Size(100, 26);
-            this.lciTabNavRefresh.MinSize = new System.Drawing.Size(100, 26);
-            this.lciTabNavRefresh.Name = "lciTabNavRefresh";
-            this.lciTabNavRefresh.Size = new System.Drawing.Size(100, 26);
-            this.lciTabNavRefresh.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lciTabNavRefresh.TextSize = new System.Drawing.Size(0, 0);
-            this.lciTabNavRefresh.TextVisible = false;
-            // 
-            // btnTabRefreshNav
-            // 
-            this.btnTabRefreshNav.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabRefreshNav.ImageOptions.Image")));
-            this.btnTabRefreshNav.Location = new System.Drawing.Point(257, 138);
-            this.btnTabRefreshNav.Name = "btnTabRefreshNav";
-            this.btnTabRefreshNav.Size = new System.Drawing.Size(96, 22);
-            this.btnTabRefreshNav.StyleController = this.lcMain;
-            this.btnTabRefreshNav.TabIndex = 16;
-            this.btnTabRefreshNav.Text = "刷新列表";
-            // 
-            // esiTabNavigation
-            // 
-            this.esiTabNavigation.AllowHotTrack = false;
-            this.esiTabNavigation.Location = new System.Drawing.Point(200, 0);
-            this.esiTabNavigation.Name = "esiTabNavigation";
-            this.esiTabNavigation.Size = new System.Drawing.Size(547, 26);
-            this.esiTabNavigation.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // lciTabNavSave
-            // 
-            this.lciTabNavSave.Control = this.btnTabSaveNav;
-            this.lciTabNavSave.Location = new System.Drawing.Point(100, 0);
-            this.lciTabNavSave.MaxSize = new System.Drawing.Size(100, 26);
-            this.lciTabNavSave.MinSize = new System.Drawing.Size(100, 26);
-            this.lciTabNavSave.Name = "lciTabNavSave";
-            this.lciTabNavSave.Size = new System.Drawing.Size(100, 26);
-            this.lciTabNavSave.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lciTabNavSave.TextSize = new System.Drawing.Size(0, 0);
-            this.lciTabNavSave.TextVisible = false;
-            // 
-            // btnTabSaveNav
-            // 
-            this.btnTabSaveNav.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabSaveNav.ImageOptions.Image")));
-            this.btnTabSaveNav.Location = new System.Drawing.Point(357, 138);
-            this.btnTabSaveNav.Name = "btnTabSaveNav";
-            this.btnTabSaveNav.Size = new System.Drawing.Size(96, 22);
-            this.btnTabSaveNav.StyleController = this.lcMain;
-            this.btnTabSaveNav.TabIndex = 17;
-            this.btnTabSaveNav.Text = "保存所選菜單";
             // 
             // lcgUser
             // 
@@ -438,7 +357,7 @@
             this.lciTabUserNew});
             this.lcgUser.Location = new System.Drawing.Point(0, 0);
             this.lcgUser.Name = "lcgUser";
-            this.lcgUser.Size = new System.Drawing.Size(747, 568);
+            this.lcgUser.Size = new System.Drawing.Size(742, 565);
             this.lcgUser.Text = "包含用戶";
             // 
             // lciTabUserRefresh
@@ -456,7 +375,7 @@
             // btnTabRefreshUser
             // 
             this.btnTabRefreshUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabRefreshUser.ImageOptions.Image")));
-            this.btnTabRefreshUser.Location = new System.Drawing.Point(257, 138);
+            this.btnTabRefreshUser.Location = new System.Drawing.Point(262, 141);
             this.btnTabRefreshUser.Name = "btnTabRefreshUser";
             this.btnTabRefreshUser.Size = new System.Drawing.Size(96, 22);
             this.btnTabRefreshUser.StyleController = this.lcMain;
@@ -468,7 +387,7 @@
             this.esiTabUser.AllowHotTrack = false;
             this.esiTabUser.Location = new System.Drawing.Point(200, 0);
             this.esiTabUser.Name = "esiTabUser";
-            this.esiTabUser.Size = new System.Drawing.Size(547, 26);
+            this.esiTabUser.Size = new System.Drawing.Size(542, 26);
             this.esiTabUser.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciTabUserNew
@@ -486,12 +405,92 @@
             // btnTabNewUser
             // 
             this.btnTabNewUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabNewUser.ImageOptions.Image")));
-            this.btnTabNewUser.Location = new System.Drawing.Point(357, 138);
+            this.btnTabNewUser.Location = new System.Drawing.Point(362, 141);
             this.btnTabNewUser.Name = "btnTabNewUser";
             this.btnTabNewUser.Size = new System.Drawing.Size(96, 22);
             this.btnTabNewUser.StyleController = this.lcMain;
             this.btnTabNewUser.TabIndex = 15;
             this.btnTabNewUser.Text = "添加用戶";
+            // 
+            // lcgNavigation
+            // 
+            this.lcgNavigation.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciTreeNavigation,
+            this.lciTabNavRefresh,
+            this.esiTabNavigation,
+            this.lciTabNavSave});
+            this.lcgNavigation.Location = new System.Drawing.Point(0, 0);
+            this.lcgNavigation.Name = "lcgNavigation";
+            this.lcgNavigation.Size = new System.Drawing.Size(742, 565);
+            this.lcgNavigation.Text = "可訪問菜單";
+            // 
+            // lciTreeNavigation
+            // 
+            this.lciTreeNavigation.Control = this.treeNavigation;
+            this.lciTreeNavigation.Location = new System.Drawing.Point(0, 26);
+            this.lciTreeNavigation.Name = "lciTreeNavigation";
+            this.lciTreeNavigation.Size = new System.Drawing.Size(742, 539);
+            this.lciTreeNavigation.TextSize = new System.Drawing.Size(0, 0);
+            this.lciTreeNavigation.TextVisible = false;
+            // 
+            // treeNavigation
+            // 
+            this.treeNavigation.Location = new System.Drawing.Point(262, 167);
+            this.treeNavigation.Name = "treeNavigation";
+            this.treeNavigation.Size = new System.Drawing.Size(738, 535);
+            this.treeNavigation.TabIndex = 11;
+            // 
+            // lciTabNavRefresh
+            // 
+            this.lciTabNavRefresh.Control = this.btnTabRefreshNav;
+            this.lciTabNavRefresh.Location = new System.Drawing.Point(0, 0);
+            this.lciTabNavRefresh.MaxSize = new System.Drawing.Size(100, 26);
+            this.lciTabNavRefresh.MinSize = new System.Drawing.Size(100, 26);
+            this.lciTabNavRefresh.Name = "lciTabNavRefresh";
+            this.lciTabNavRefresh.Size = new System.Drawing.Size(100, 26);
+            this.lciTabNavRefresh.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciTabNavRefresh.TextSize = new System.Drawing.Size(0, 0);
+            this.lciTabNavRefresh.TextVisible = false;
+            // 
+            // btnTabRefreshNav
+            // 
+            this.btnTabRefreshNav.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabRefreshNav.ImageOptions.Image")));
+            this.btnTabRefreshNav.Location = new System.Drawing.Point(262, 141);
+            this.btnTabRefreshNav.Name = "btnTabRefreshNav";
+            this.btnTabRefreshNav.Size = new System.Drawing.Size(96, 22);
+            this.btnTabRefreshNav.StyleController = this.lcMain;
+            this.btnTabRefreshNav.TabIndex = 16;
+            this.btnTabRefreshNav.Text = "刷新列表";
+            // 
+            // esiTabNavigation
+            // 
+            this.esiTabNavigation.AllowHotTrack = false;
+            this.esiTabNavigation.Location = new System.Drawing.Point(200, 0);
+            this.esiTabNavigation.Name = "esiTabNavigation";
+            this.esiTabNavigation.Size = new System.Drawing.Size(542, 26);
+            this.esiTabNavigation.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciTabNavSave
+            // 
+            this.lciTabNavSave.Control = this.btnTabSaveNav;
+            this.lciTabNavSave.Location = new System.Drawing.Point(100, 0);
+            this.lciTabNavSave.MaxSize = new System.Drawing.Size(100, 26);
+            this.lciTabNavSave.MinSize = new System.Drawing.Size(100, 26);
+            this.lciTabNavSave.Name = "lciTabNavSave";
+            this.lciTabNavSave.Size = new System.Drawing.Size(100, 26);
+            this.lciTabNavSave.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciTabNavSave.TextSize = new System.Drawing.Size(0, 0);
+            this.lciTabNavSave.TextVisible = false;
+            // 
+            // btnTabSaveNav
+            // 
+            this.btnTabSaveNav.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabSaveNav.ImageOptions.Image")));
+            this.btnTabSaveNav.Location = new System.Drawing.Point(362, 141);
+            this.btnTabSaveNav.Name = "btnTabSaveNav";
+            this.btnTabSaveNav.Size = new System.Drawing.Size(96, 22);
+            this.btnTabSaveNav.StyleController = this.lcMain;
+            this.btnTabSaveNav.TabIndex = 17;
+            this.btnTabSaveNav.Text = "保存所選菜單";
             // 
             // lcgFunction
             // 
@@ -502,7 +501,7 @@
             this.lciTabFuncSave});
             this.lcgFunction.Location = new System.Drawing.Point(0, 0);
             this.lcgFunction.Name = "lcgFunction";
-            this.lcgFunction.Size = new System.Drawing.Size(747, 568);
+            this.lcgFunction.Size = new System.Drawing.Size(742, 565);
             this.lcgFunction.Text = "可操作功能";
             // 
             // lciTreeFunction
@@ -510,15 +509,15 @@
             this.lciTreeFunction.Control = this.treeFunction;
             this.lciTreeFunction.Location = new System.Drawing.Point(0, 26);
             this.lciTreeFunction.Name = "lciTreeFunction";
-            this.lciTreeFunction.Size = new System.Drawing.Size(747, 542);
+            this.lciTreeFunction.Size = new System.Drawing.Size(742, 539);
             this.lciTreeFunction.TextSize = new System.Drawing.Size(0, 0);
             this.lciTreeFunction.TextVisible = false;
             // 
             // treeFunction
             // 
-            this.treeFunction.Location = new System.Drawing.Point(257, 164);
+            this.treeFunction.Location = new System.Drawing.Point(262, 167);
             this.treeFunction.Name = "treeFunction";
-            this.treeFunction.Size = new System.Drawing.Size(743, 538);
+            this.treeFunction.Size = new System.Drawing.Size(738, 535);
             this.treeFunction.TabIndex = 12;
             // 
             // lciTabFuncRefresh
@@ -536,7 +535,7 @@
             // btnTabRefreshFunc
             // 
             this.btnTabRefreshFunc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabRefreshFunc.ImageOptions.Image")));
-            this.btnTabRefreshFunc.Location = new System.Drawing.Point(257, 138);
+            this.btnTabRefreshFunc.Location = new System.Drawing.Point(262, 141);
             this.btnTabRefreshFunc.Name = "btnTabRefreshFunc";
             this.btnTabRefreshFunc.Size = new System.Drawing.Size(96, 22);
             this.btnTabRefreshFunc.StyleController = this.lcMain;
@@ -548,7 +547,7 @@
             this.esiTabFunction.AllowHotTrack = false;
             this.esiTabFunction.Location = new System.Drawing.Point(200, 0);
             this.esiTabFunction.Name = "esiTabFunction";
-            this.esiTabFunction.Size = new System.Drawing.Size(547, 26);
+            this.esiTabFunction.Size = new System.Drawing.Size(542, 26);
             this.esiTabFunction.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciTabFuncSave
@@ -566,7 +565,7 @@
             // btnTabSaveFunc
             // 
             this.btnTabSaveFunc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabSaveFunc.ImageOptions.Image")));
-            this.btnTabSaveFunc.Location = new System.Drawing.Point(357, 138);
+            this.btnTabSaveFunc.Location = new System.Drawing.Point(362, 141);
             this.btnTabSaveFunc.Name = "btnTabSaveFunc";
             this.btnTabSaveFunc.Size = new System.Drawing.Size(96, 22);
             this.btnTabSaveFunc.StyleController = this.lcMain;
@@ -582,7 +581,7 @@
             this.lciTabOrgSave});
             this.lcgOrganization.Location = new System.Drawing.Point(0, 0);
             this.lcgOrganization.Name = "lcgOrganization";
-            this.lcgOrganization.Size = new System.Drawing.Size(747, 568);
+            this.lcgOrganization.Size = new System.Drawing.Size(742, 565);
             this.lcgOrganization.Text = "可查看數據";
             // 
             // lciTreeOrganization
@@ -590,15 +589,15 @@
             this.lciTreeOrganization.Control = this.treeOrganization;
             this.lciTreeOrganization.Location = new System.Drawing.Point(0, 26);
             this.lciTreeOrganization.Name = "lciTreeOrganization";
-            this.lciTreeOrganization.Size = new System.Drawing.Size(747, 542);
+            this.lciTreeOrganization.Size = new System.Drawing.Size(742, 539);
             this.lciTreeOrganization.TextSize = new System.Drawing.Size(0, 0);
             this.lciTreeOrganization.TextVisible = false;
             // 
             // treeOrganization
             // 
-            this.treeOrganization.Location = new System.Drawing.Point(257, 164);
+            this.treeOrganization.Location = new System.Drawing.Point(262, 167);
             this.treeOrganization.Name = "treeOrganization";
-            this.treeOrganization.Size = new System.Drawing.Size(743, 538);
+            this.treeOrganization.Size = new System.Drawing.Size(738, 535);
             this.treeOrganization.TabIndex = 13;
             // 
             // lciTabOrgRefresh
@@ -616,7 +615,7 @@
             // btnTabRefreshOrg
             // 
             this.btnTabRefreshOrg.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabRefreshOrg.ImageOptions.Image")));
-            this.btnTabRefreshOrg.Location = new System.Drawing.Point(257, 138);
+            this.btnTabRefreshOrg.Location = new System.Drawing.Point(262, 141);
             this.btnTabRefreshOrg.Name = "btnTabRefreshOrg";
             this.btnTabRefreshOrg.Size = new System.Drawing.Size(96, 22);
             this.btnTabRefreshOrg.StyleController = this.lcMain;
@@ -628,7 +627,7 @@
             this.esiTabOrganization.AllowHotTrack = false;
             this.esiTabOrganization.Location = new System.Drawing.Point(200, 0);
             this.esiTabOrganization.Name = "esiTabOrganization";
-            this.esiTabOrganization.Size = new System.Drawing.Size(547, 26);
+            this.esiTabOrganization.Size = new System.Drawing.Size(542, 26);
             this.esiTabOrganization.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciTabOrgSave
@@ -646,7 +645,7 @@
             // btnTabSaveOrg
             // 
             this.btnTabSaveOrg.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabSaveOrg.ImageOptions.Image")));
-            this.btnTabSaveOrg.Location = new System.Drawing.Point(357, 138);
+            this.btnTabSaveOrg.Location = new System.Drawing.Point(362, 141);
             this.btnTabSaveOrg.Name = "btnTabSaveOrg";
             this.btnTabSaveOrg.Size = new System.Drawing.Size(96, 22);
             this.btnTabSaveOrg.StyleController = this.lcMain;
@@ -661,7 +660,6 @@
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
-            this.lcMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgTreeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSearch)).EndInit();
@@ -678,16 +676,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tcgRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.esiTabNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavSave)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeFunction)).EndInit();

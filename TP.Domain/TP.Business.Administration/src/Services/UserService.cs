@@ -236,6 +236,20 @@ namespace TP.Business.Administration.Services
                 });
         }
 
+        public async Task<WebApiResult<string>> UpdatePasswordAsync(string userId, string currentPassword, string newPassword)
+        {
+            return await Guard.TryCatch(
+                async () =>
+                {
+                    var result = await _userRepository.UpdatePasswordAsync(userId, currentPassword, newPassword);
+
+                    if(result.Succeeded == false)
+                    {
+                        throw new ApplicationException("旧密码错误,保存失败!");
+                    }
+                });
+        }
+
         private IEnumerable<UserListModel> ConvertUserToListModel(IEnumerable<ApplicationUser> users, bool isShowDepartment = true)
         {
             var result = new List<UserListModel>();
