@@ -9,7 +9,7 @@ namespace TP.WL.ERP.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(TP.WL.ERP.Data.ApplicationDbContext context)

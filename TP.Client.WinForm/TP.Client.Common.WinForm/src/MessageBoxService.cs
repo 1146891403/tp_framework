@@ -28,5 +28,12 @@ namespace TP.Client.WinForm.Common
         {
             XtraMessageBox.Show(string.Join("\n", errors), caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public static DialogResult Questioned(string message) => Questioned(message, "询问");
+
+        public static DialogResult Questioned(string message, string caption)
+        {
+            return XtraMessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
     }
 }

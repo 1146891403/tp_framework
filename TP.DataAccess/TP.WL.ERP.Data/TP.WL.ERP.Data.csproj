@@ -54,9 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202110060146478_update.cs" />
-    <Compile Include="Migrations\202110060146478_update.Designer.cs">
-      <DependentUpon>202110060146478_update.cs</DependentUpon>
+    <Compile Include="Migrations\202110180228504_CreatedDB.cs" />
+    <Compile Include="Migrations\202110180228504_CreatedDB.Designer.cs">
+      <DependentUpon>202110180228504_CreatedDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110180453030_Update1.cs" />
+    <Compile Include="Migrations\202110180453030_Update1.Designer.cs">
+      <DependentUpon>202110180453030_Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110190142505_update2.cs" />
+    <Compile Include="Migrations\202110190142505_update2.Designer.cs">
+      <DependentUpon>202110190142505_update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110190215451_update3.cs" />
+    <Compile Include="Migrations\202110190215451_update3.Designer.cs">
+      <DependentUpon>202110190215451_update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110280558081_update4.cs" />
+    <Compile Include="Migrations\202110280558081_update4.Designer.cs">
+      <DependentUpon>202110280558081_update4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,10 +96,15 @@
     <Compile Include="src\Entities\Estimate\EstimateCost.cs" />
     <Compile Include="src\Entities\Estimate\EstimateMaterial.cs" />
     <Compile Include="src\Entities\Estimate\EstimateRequest.cs" />
+    <Compile Include="src\Entities\Ship\ShipCarton.cs" />
+    <Compile Include="src\Entities\Ship\ShipPacking.cs" />
     <Compile Include="src\Extensions\ModelBuilderExtensions.cs" />
+    <Compile Include="src\Mappings\Administration\ApplicationRoleDepartmentsMap.cs" />
     <Compile Include="src\Mappings\Crm\CertificateMap.cs" />
     <Compile Include="src\Mappings\Crm\ClientCertificateMap.cs" />
     <Compile Include="src\Mappings\Crm\ClientOpenFileMap.cs" />
+    <Compile Include="src\Mappings\Ship\ShipCartonMap.cs" />
+    <Compile Include="src\Mappings\Ship\ShipPackingMap.cs" />
     <Compile Include="src\Mappings\Utilities\FileCabinetMap.cs" />
     <Compile Include="src\Mappings\Utilities\FileShareRoleMap.cs" />
     <Compile Include="src\Mappings\Utilities\FileShareUserMap.cs" />
@@ -155,8 +176,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202110060146478_update.resx">
-      <DependentUpon>202110060146478_update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110180228504_CreatedDB.resx">
+      <DependentUpon>202110180228504_CreatedDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110180453030_Update1.resx">
+      <DependentUpon>202110180453030_Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110190142505_update2.resx">
+      <DependentUpon>202110190142505_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110190215451_update3.resx">
+      <DependentUpon>202110190215451_update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110280558081_update4.resx">
+      <DependentUpon>202110280558081_update4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

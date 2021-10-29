@@ -155,6 +155,13 @@ namespace TP.Data.Repository.EntityFramework
             return Task.FromResult(Update(entity));
         }
 
+        public abstract int BulkUpdate(IEnumerable<TEntity> entities);
+
+        public virtual Task<int> BulkUpdateAsync(IEnumerable<TEntity> entities)
+        {
+            return Task.FromResult(BulkUpdate(entities));
+        }
+
         public virtual TEntity Update(TPrimaryKey id, Action<TEntity> updateAction)
         {
             var entity = Get(id);

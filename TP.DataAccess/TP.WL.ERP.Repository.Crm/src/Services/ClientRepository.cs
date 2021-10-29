@@ -28,7 +28,7 @@ namespace TP.WL.ERP.Repository.Crm.Services
             return await _clientRepository.GetAllListAsync(x => x.ApplicantId == userId);
         }
 
-        public async Task<IEnumerable<ClientBrand>> GetBrandsAsync(long clientId)
+        public Task<IEnumerable<ClientBrand>> GetBrandsAsync(long clientId)
         {
             throw new Exception();
         }

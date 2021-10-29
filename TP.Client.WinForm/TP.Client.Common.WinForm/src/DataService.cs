@@ -64,5 +64,39 @@ namespace TP.Client.WinForm.Common
                 MessageBoxService.Failed(ex.Message);
             }
         }
+
+        public async Task<bool> RPostAsync(string controller, string content) => await RPostAsync(controller, "add", content);
+
+
+        public async Task<bool> RPostAsync(string controller, string action, string content) => await RPostAsync(controller, action, content, "post");
+
+        public async Task<bool> RPutAsync(string controller, string content) => await RPutAsync(controller, "update", content);
+
+        public async Task<bool> RPutAsync(string controller, string action, string content) => await RPostAsync(controller, action, content, "put");
+
+        private async Task<bool> RPostAsync(string controller, string action, string content, string type)
+        {
+            try
+            {
+                string result = type == "put"
+                    ? await ApiService.Current.PutAsync(controller, action, content)
+                    : await ApiService.Current.PostAsync(controller, action, content);
+
+                var obj = JsonHelper.DeserializeObject<WebApiResult<string>>(result);
+
+                if (obj.Succeeded)
+                    MessageBoxService.Successed();
+                else
+                    MessageBoxService.Failed(obj.Errors);
+
+                return obj.Succeeded;
+            }
+            catch (Exception ex)
+            {
+                MessageBoxService.Failed(ex.Message);
+                return false;
+            }
+
+        }
     }
 }

@@ -44,12 +44,6 @@
             this.lcTreeName = new DevExpress.XtraEditors.LabelControl();
             this.lciTreeName = new DevExpress.XtraLayout.LayoutControlItem();
             this.tcgRole = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.lcgUser = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciTabUserRefresh = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnTabRefreshUser = new DevExpress.XtraEditors.SimpleButton();
-            this.esiTabUser = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciTabUserNew = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnTabNewUser = new DevExpress.XtraEditors.SimpleButton();
             this.lcgNavigation = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciTreeNavigation = new DevExpress.XtraLayout.LayoutControlItem();
             this.treeNavigation = new DevExpress.XtraTreeList.TreeList();
@@ -58,6 +52,12 @@
             this.esiTabNavigation = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciTabNavSave = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnTabSaveNav = new DevExpress.XtraEditors.SimpleButton();
+            this.lcgUser = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciTabUserRefresh = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnTabRefreshUser = new DevExpress.XtraEditors.SimpleButton();
+            this.esiTabUser = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciTabUserNew = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnTabNewUser = new DevExpress.XtraEditors.SimpleButton();
             this.lcgFunction = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciTreeFunction = new DevExpress.XtraLayout.LayoutControlItem();
             this.treeFunction = new DevExpress.XtraTreeList.TreeList();
@@ -92,16 +92,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tcgRole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.esiTabNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeFunction)).BeginInit();
@@ -348,70 +348,6 @@
             this.lcgFunction,
             this.lcgOrganization});
             // 
-            // lcgUser
-            // 
-            this.lcgUser.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciGrid,
-            this.lciTabUserRefresh,
-            this.esiTabUser,
-            this.lciTabUserNew});
-            this.lcgUser.Location = new System.Drawing.Point(0, 0);
-            this.lcgUser.Name = "lcgUser";
-            this.lcgUser.Size = new System.Drawing.Size(742, 565);
-            this.lcgUser.Text = "包含用戶";
-            // 
-            // lciTabUserRefresh
-            // 
-            this.lciTabUserRefresh.Control = this.btnTabRefreshUser;
-            this.lciTabUserRefresh.Location = new System.Drawing.Point(0, 0);
-            this.lciTabUserRefresh.MaxSize = new System.Drawing.Size(100, 26);
-            this.lciTabUserRefresh.MinSize = new System.Drawing.Size(100, 26);
-            this.lciTabUserRefresh.Name = "lciTabUserRefresh";
-            this.lciTabUserRefresh.Size = new System.Drawing.Size(100, 26);
-            this.lciTabUserRefresh.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lciTabUserRefresh.TextSize = new System.Drawing.Size(0, 0);
-            this.lciTabUserRefresh.TextVisible = false;
-            // 
-            // btnTabRefreshUser
-            // 
-            this.btnTabRefreshUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabRefreshUser.ImageOptions.Image")));
-            this.btnTabRefreshUser.Location = new System.Drawing.Point(262, 141);
-            this.btnTabRefreshUser.Name = "btnTabRefreshUser";
-            this.btnTabRefreshUser.Size = new System.Drawing.Size(96, 22);
-            this.btnTabRefreshUser.StyleController = this.lcMain;
-            this.btnTabRefreshUser.TabIndex = 14;
-            this.btnTabRefreshUser.Text = "刷新列表";
-            // 
-            // esiTabUser
-            // 
-            this.esiTabUser.AllowHotTrack = false;
-            this.esiTabUser.Location = new System.Drawing.Point(200, 0);
-            this.esiTabUser.Name = "esiTabUser";
-            this.esiTabUser.Size = new System.Drawing.Size(542, 26);
-            this.esiTabUser.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // lciTabUserNew
-            // 
-            this.lciTabUserNew.Control = this.btnTabNewUser;
-            this.lciTabUserNew.Location = new System.Drawing.Point(100, 0);
-            this.lciTabUserNew.MaxSize = new System.Drawing.Size(100, 26);
-            this.lciTabUserNew.MinSize = new System.Drawing.Size(100, 26);
-            this.lciTabUserNew.Name = "lciTabUserNew";
-            this.lciTabUserNew.Size = new System.Drawing.Size(100, 26);
-            this.lciTabUserNew.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lciTabUserNew.TextSize = new System.Drawing.Size(0, 0);
-            this.lciTabUserNew.TextVisible = false;
-            // 
-            // btnTabNewUser
-            // 
-            this.btnTabNewUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabNewUser.ImageOptions.Image")));
-            this.btnTabNewUser.Location = new System.Drawing.Point(362, 141);
-            this.btnTabNewUser.Name = "btnTabNewUser";
-            this.btnTabNewUser.Size = new System.Drawing.Size(96, 22);
-            this.btnTabNewUser.StyleController = this.lcMain;
-            this.btnTabNewUser.TabIndex = 15;
-            this.btnTabNewUser.Text = "添加用戶";
-            // 
             // lcgNavigation
             // 
             this.lcgNavigation.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -491,6 +427,70 @@
             this.btnTabSaveNav.StyleController = this.lcMain;
             this.btnTabSaveNav.TabIndex = 17;
             this.btnTabSaveNav.Text = "保存所選菜單";
+            // 
+            // lcgUser
+            // 
+            this.lcgUser.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciGrid,
+            this.lciTabUserRefresh,
+            this.esiTabUser,
+            this.lciTabUserNew});
+            this.lcgUser.Location = new System.Drawing.Point(0, 0);
+            this.lcgUser.Name = "lcgUser";
+            this.lcgUser.Size = new System.Drawing.Size(742, 565);
+            this.lcgUser.Text = "包含用戶";
+            // 
+            // lciTabUserRefresh
+            // 
+            this.lciTabUserRefresh.Control = this.btnTabRefreshUser;
+            this.lciTabUserRefresh.Location = new System.Drawing.Point(0, 0);
+            this.lciTabUserRefresh.MaxSize = new System.Drawing.Size(100, 26);
+            this.lciTabUserRefresh.MinSize = new System.Drawing.Size(100, 26);
+            this.lciTabUserRefresh.Name = "lciTabUserRefresh";
+            this.lciTabUserRefresh.Size = new System.Drawing.Size(100, 26);
+            this.lciTabUserRefresh.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciTabUserRefresh.TextSize = new System.Drawing.Size(0, 0);
+            this.lciTabUserRefresh.TextVisible = false;
+            // 
+            // btnTabRefreshUser
+            // 
+            this.btnTabRefreshUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabRefreshUser.ImageOptions.Image")));
+            this.btnTabRefreshUser.Location = new System.Drawing.Point(262, 141);
+            this.btnTabRefreshUser.Name = "btnTabRefreshUser";
+            this.btnTabRefreshUser.Size = new System.Drawing.Size(96, 22);
+            this.btnTabRefreshUser.StyleController = this.lcMain;
+            this.btnTabRefreshUser.TabIndex = 14;
+            this.btnTabRefreshUser.Text = "刷新列表";
+            // 
+            // esiTabUser
+            // 
+            this.esiTabUser.AllowHotTrack = false;
+            this.esiTabUser.Location = new System.Drawing.Point(200, 0);
+            this.esiTabUser.Name = "esiTabUser";
+            this.esiTabUser.Size = new System.Drawing.Size(542, 26);
+            this.esiTabUser.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciTabUserNew
+            // 
+            this.lciTabUserNew.Control = this.btnTabNewUser;
+            this.lciTabUserNew.Location = new System.Drawing.Point(100, 0);
+            this.lciTabUserNew.MaxSize = new System.Drawing.Size(100, 26);
+            this.lciTabUserNew.MinSize = new System.Drawing.Size(100, 26);
+            this.lciTabUserNew.Name = "lciTabUserNew";
+            this.lciTabUserNew.Size = new System.Drawing.Size(100, 26);
+            this.lciTabUserNew.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciTabUserNew.TextSize = new System.Drawing.Size(0, 0);
+            this.lciTabUserNew.TextVisible = false;
+            // 
+            // btnTabNewUser
+            // 
+            this.btnTabNewUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTabNewUser.ImageOptions.Image")));
+            this.btnTabNewUser.Location = new System.Drawing.Point(362, 141);
+            this.btnTabNewUser.Name = "btnTabNewUser";
+            this.btnTabNewUser.Size = new System.Drawing.Size(96, 22);
+            this.btnTabNewUser.StyleController = this.lcMain;
+            this.btnTabNewUser.TabIndex = 15;
+            this.btnTabNewUser.Text = "添加用戶";
             // 
             // lcgFunction
             // 
@@ -660,6 +660,7 @@
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
+            this.lcMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgTreeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgSearch)).EndInit();
@@ -676,16 +677,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tcgRole)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.esiTabNavigation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTabNavSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.esiTabUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTabUserNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTreeFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeFunction)).EndInit();

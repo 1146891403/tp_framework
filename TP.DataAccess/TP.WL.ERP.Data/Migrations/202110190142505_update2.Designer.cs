@@ -7,13 +7,13 @@ namespace TP.WL.ERP.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class update : IMigrationMetadata
+    public sealed partial class update2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(update));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(update2));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110060146478_update"; }
+            get { return "202110190142505_update2"; }
         }
         
         string IMigrationMetadata.Source

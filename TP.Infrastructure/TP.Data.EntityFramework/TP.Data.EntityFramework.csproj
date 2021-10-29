@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Entities\Administration\ApplicationGroup.cs" />
+    <Compile Include="src\Entities\Administration\ApplicationRoleDepartment.cs" />
     <Compile Include="src\Entities\Administration\ApplicationRoleFunction.cs" />
     <Compile Include="src\Entities\Administration\ApplicationRoleGroup.cs" />
     <Compile Include="src\Entities\Administration\ApplicationRoleView.cs" />

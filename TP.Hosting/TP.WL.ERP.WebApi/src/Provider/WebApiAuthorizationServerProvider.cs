@@ -78,8 +78,8 @@ namespace TP.WL.ERP.WebApi.Provider
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             System.Diagnostics.Debug.WriteLine(" 客户端用户名、密码验证");
-            System.Diagnostics.Debug.WriteLine(context.UserName);
-            System.Diagnostics.Debug.WriteLine(context.Password);
+            //System.Diagnostics.Debug.WriteLine(context.UserName);
+            //System.Diagnostics.Debug.WriteLine(context.Password);
 
             var signInManager = context.OwinContext.Get<ApplicationSignInManager>();
             var result = await signInManager.PasswordSignInAsync(context.UserName, context.Password, false, false);
@@ -121,11 +121,6 @@ namespace TP.WL.ERP.WebApi.Provider
 
         public override Task MatchEndpoint(OAuthMatchEndpointContext context)
         {
-            var values = context.Request.Headers.Get("authorization");
-
-            System.Diagnostics.Debug.WriteLine(values);
-
-
             if (context.OwinContext.Request.Method == "OPTIONS" && context.IsTokenEndpoint)
             {
                 context.OwinContext.Response.Headers.Add("Access-Control-Allow-Methods", new[] { "POST" });

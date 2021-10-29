@@ -146,6 +146,7 @@
     <Compile Include="src\Controllers\Administration\UserController.cs" />
     <Compile Include="src\Controllers\Crm\CertificateController.cs" />
     <Compile Include="src\Controllers\Crm\ClientController.cs" />
+    <Compile Include="src\Controllers\Ship\ShipCartonController.cs" />
     <Compile Include="src\Controllers\Utilities\DictionaryController.cs" />
     <Compile Include="src\Provider\WebApiAuthorizationServerProvider.cs" />
     <Compile Include="src\Provider\WebApiRefreshTokenProvider.cs" />
@@ -184,6 +185,10 @@
     <ProjectReference Include="..\..\TP.Infrastructure\TP.Infrastructure.Common\TP.Infrastructure.Common.csproj">
       <Project>{09B5C2DA-9232-43BB-992A-029E70C0D728}</Project>
       <Name>TP.Infrastructure.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TP.WL.ERP.Business.Ship\TP.WL.ERP.Business.Ship.csproj">
+      <Project>{D4BCFBDA-AF6F-4EA6-9F16-37C26D72DB9C}</Project>
+      <Name>TP.WL.ERP.Business.Ship</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

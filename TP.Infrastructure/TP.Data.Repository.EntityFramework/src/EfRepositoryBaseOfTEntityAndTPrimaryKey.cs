@@ -188,18 +188,18 @@ namespace TP.Data.Repository.EntityFramework
         {
             AttachIfNot(entity);
 
-            //Context.Entry(entity).State = EntityState.Modified;
+            Context.Entry(entity).State = EntityState.Modified;
 
             var entry = Context.Entry(entity);
 
             var objectContext = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)Context).ObjectContext;
 
-            var aaa = objectContext.ObjectStateManager.GetObjectStateEntry(entity).EntityKey.EntityKeyValues.Select(k => k.Key);
+            //var aaa = objectContext.ObjectStateManager.GetObjectStateEntry(entity).EntityKey.EntityKeyValues.Select(k => k.Key);
 
-            var a = entry.OriginalValues.GetValue<string>("Remark");
-            var b = entry.CurrentValues.GetValue<string>("Remark");
+            //var a = entry.OriginalValues.GetValue<string>("Remark");
+            //var b = entry.CurrentValues.GetValue<string>("Remark");
 
-            var c = a == b;
+            //var c = a == b;
 
             var propertyNames = entry.CurrentValues.PropertyNames;
 
@@ -215,6 +215,50 @@ namespace TP.Data.Repository.EntityFramework
             await Context.SaveChangesAsync();
 
             return await Task.FromResult(entity);
+        }
+
+        public override int BulkUpdate(IEnumerable<TEntity> entities)
+        {
+            //using (DbContextTransaction transaction = Context.Database.BeginTransaction())
+            //{
+            //    try
+            //    {
+            //        foreach (var entity in entities)
+            //        {
+            //            AttachIfNot(entity);
+            //            Context.Entry(entity).State = EntityState.Modified;
+            //        }
+
+            //        var number = Context.SaveChanges();
+
+            //        transaction.Commit();
+
+            //        return number;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        transaction.Rollback();
+            //        throw new ApplicationException($"保存失败,已回滚数据!错误代码:{ex.ToString()}");
+            //    }
+            //}
+            foreach (var entity in entities)
+            {
+                AttachIfNot(entity);
+                Context.Entry(entity).State = EntityState.Modified;
+            }
+
+            return Context.SaveChanges();
+        }
+
+        public override async Task<int> BulkUpdateAsync(IEnumerable<TEntity> entities)
+        {
+            foreach (var entity in entities)
+            {
+                AttachIfNot(entity);
+                Context.Entry(entity).State = EntityState.Modified;
+            }
+
+            return await Context.SaveChangesAsync();
         }
 
         public override async Task<TEntity> UpdateAsync(TPrimaryKey id, Func<TEntity, Task> updateAction)

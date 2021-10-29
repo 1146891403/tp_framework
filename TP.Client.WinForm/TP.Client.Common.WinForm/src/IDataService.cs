@@ -20,5 +20,14 @@ namespace TP.Client.WinForm.Common
         Task PutAsync(string controller, string content);
 
         Task PutAsync(string controller, string action, string content);
+
+
+        Task<bool> RPostAsync(string controller, string content);
+
+        Task<bool> RPostAsync(string controller, string action, string content);
+
+        Task<bool> RPutAsync(string controller, string content);
+
+        Task<bool> RPutAsync(string controller, string action, string content);
     }
 }

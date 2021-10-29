@@ -134,10 +134,17 @@ namespace TP.Infrastructure.Common.Repository
         /// <returns>Updated entity</returns>
         Task<TEntity> UpdateAsync(TPrimaryKey id, Func<TEntity, Task> updateAction);
 
+        /// <summary>
+        /// 批量更新
+        /// </summary>
+        /// <param name="entities">更新的集合</param>
+        /// <returns>更新数量</returns>
+        Task<int> BulkUpdateAsync(IEnumerable<TEntity> entities);
+
         #endregion
 
         #region Delete
-        
+
         /// <summary>
         /// Deletes an entity.
         /// </summary>

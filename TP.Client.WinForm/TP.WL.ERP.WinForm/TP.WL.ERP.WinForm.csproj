@@ -135,6 +135,10 @@
       <Project>{09B5C2DA-9232-43BB-992A-029E70C0D728}</Project>
       <Name>TP.Infrastructure.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\TP.WL.ERP.WinForm.Ship\TP.WL.ERP.WinForm.Ship.csproj">
+      <Project>{2f281506-c991-43f7-9c4a-58122deb5662}</Project>
+      <Name>TP.WL.ERP.WinForm.Ship</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TP.Client.Common.WinForm\TP.Client.WinForm.Common.csproj">
       <Project>{31248E19-FED8-4AF0-98E3-A7C196C03599}</Project>
       <Name>TP.Client.WinForm.Common</Name>
