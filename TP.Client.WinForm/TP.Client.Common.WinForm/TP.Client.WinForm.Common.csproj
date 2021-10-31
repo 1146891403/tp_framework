@@ -92,6 +92,12 @@
     <Compile Include="src\Controls\GridViewBase.Designer.cs">
       <DependentUpon>GridViewBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Controls\MasterDetailBasecs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\MasterDetailBasecs.Designer.cs">
+      <DependentUpon>MasterDetailBasecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\DataService.cs" />
     <Compile Include="src\ApiService.cs" />
     <Compile Include="src\Configuration\WebApiSettings.cs" />
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Controls\GridViewBase.resx">
       <DependentUpon>GridViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\MasterDetailBasecs.resx">
+      <DependentUpon>MasterDetailBasecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Controls\Pagination.resx">
       <DependentUpon>Pagination.cs</DependentUpon>
