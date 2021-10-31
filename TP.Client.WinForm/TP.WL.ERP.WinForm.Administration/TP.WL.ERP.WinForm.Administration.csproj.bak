@@ -32,15 +32,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -99,11 +102,23 @@
     <Compile Include="src\Controls\DictionaryGridView.Designer.cs">
       <DependentUpon>DictionaryGridView.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Controls\TreeListDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Controls\TreeListDemo.Designer.cs">
+      <DependentUpon>TreeListDemo.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Controls\UserGridView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="src\Controls\UserGridView.Designer.cs">
       <DependentUpon>UserGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Forms\FrmDictionaryBatchData.cs">
       <SubType>Form</SubType>
@@ -198,6 +213,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\FunctionGridView.resx">
+      <DependentUpon>FunctionGridView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Controls\NavigationGridView.resx">
       <DependentUpon>NavigationGridView.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,8 +228,14 @@
     <EmbeddedResource Include="src\Controls\DictionaryGridView.resx">
       <DependentUpon>DictionaryGridView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\TreeListDemo.resx">
+      <DependentUpon>TreeListDemo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Controls\UserGridView.resx">
       <DependentUpon>UserGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\FrmDictionaryBatchData.resx">
       <DependentUpon>FrmDictionaryBatchData.cs</DependentUpon>
