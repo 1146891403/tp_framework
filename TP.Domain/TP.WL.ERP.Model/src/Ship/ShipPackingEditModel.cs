@@ -18,6 +18,6 @@ namespace TP.WL.ERP.Model.Ship
 
         public string CreatorId { get; set; }
 
-        public virtual ShipCarton ShipCarton { get; set; }
+        public virtual ShipCarton CartonModle { get; set; }
     }
 }

@@ -38,27 +38,22 @@ namespace TP.WL.ERP.WinForm.Ship.Controls
             //初始化GridControl
             InitializeAsync();
 
-            InitializeButton();
-
-        }
-
-        #region 初始化
-        private void InitializeButton()
-        {
             btnNew.Click += new EventHandler(BtnNew_Click);
             btnSave.Click += new EventHandler(BtnSave_Click);
             btnDelete.Click += new EventHandler(BtnDelete_Click);
             btnSearch.Click += new EventHandler(BtnSearch_ClickAsync);
             btnTest.Click += new EventHandler(BtnTest_Click);
-        }
-
-        private async void InitializeAsync()
-        {
-            await ResetDataSource();
 
             GridView.InitNewRow += new InitNewRowEventHandler(GridView_InitNewRow);
             GridView.RowDeleted += new RowDeletedEventHandler(GridView_RowDeleted);
             GridView.RowUpdated += new RowObjectEventHandler(GridView_RowUpdate);
+        }
+
+        #region 初始化
+
+        private async void InitializeAsync()
+        {
+            await ResetDataSource();
         }
 
         private async Task ResetDataSource()
@@ -126,7 +121,7 @@ namespace TP.WL.ERP.WinForm.Ship.Controls
         }
         #endregion
 
-        #region Grid 新增 修改 删除 事件
+        #region GridControl 新增 修改 删除 事件
         private void GridView_InitNewRow(object sender, InitNewRowEventArgs e)
         {
             GridView gridView = (GridView)sender;

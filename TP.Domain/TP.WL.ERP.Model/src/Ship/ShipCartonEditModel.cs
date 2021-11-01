@@ -33,6 +33,8 @@ namespace TP.WL.ERP.Model.Ship
 
         public string Terms { get; set; }
 
+        public ICollection<ShipPackingEditModel> PackingModels { get; set; }
+
         //public string CreatorId { get; set; }
 
         //public DateTime CreateDate { get; set; }
